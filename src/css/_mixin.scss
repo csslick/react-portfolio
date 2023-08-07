@@ -1,0 +1,8 @@
+// _mixin.scss
+
+@mixin flex($main: start, $cross: start) {
+  display: flex;
+  justify-content: $main;
+  align-items: $cross;
+}
+

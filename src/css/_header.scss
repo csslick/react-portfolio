@@ -1,0 +1,56 @@
+// _header.scss
+header {
+  h1 { font-size: 20px; }
+  nav { text-transform: uppercase; }
+  .mobile-toggle {
+    padding: 4px;
+  }
+}
+
+// pc
+@media screen and (min-width: 768px) {
+  header {
+    .mobile-toggle { display: none;}
+    position: fixed;
+    padding: 20px;
+    z-index: 999;
+    background: $bg-light;
+    width: 100%;
+    @include flex(space-between, center);
+    nav ul {
+      display: flex;
+      gap: 2em;
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+  header { 
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 999;
+    background: $bg-light;
+    @include flex(space-between, center);
+    padding: 20px;
+    nav {
+      position: absolute;
+      width: 100%;
+      background: #ccc;
+      left: 0;
+      top: 60px;
+      display: none;
+      a { 
+        padding: 10px 20px;
+        display: block;
+        &:hover {
+          background:$sub-color;
+          color: #fff;
+        }
+      }
+    }
+    nav.active { display: block;}
+  }
+}
+

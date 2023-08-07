@@ -1,0 +1,9 @@
+@import 'reset';
+@import 'var';
+@import 'mixin';
+@import 'header';
+
+body {
+  background: #fff;
+  color: $text-dark;
+}
