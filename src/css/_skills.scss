@@ -1,0 +1,10 @@
+#skills {
+  .container {
+    background: $main-color;
+    color: #fff;
+    @include container(1440);
+    display: flex;
+    justify-content: space-between;
+    height: 200vh;
+  }
+}

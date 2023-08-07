@@ -1,0 +1,31 @@
+
+#about {
+  .container {
+    background: $main-color;
+    color: #fff;
+    @include container(1440);
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      position: sticky;
+      width: 50%;
+      height: 2em; // sticky시 높이값 잡아줘야 됨
+      left: 0;
+      top: 100px;
+      font-size: 3em;
+      // background: pink;
+    }
+
+    .about_text {
+      width: 50%;
+      li {
+        height: 500px;
+        h3 { 
+          font-size: 2em;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
