@@ -1,10 +1,48 @@
 #skills {
-  .container {
-    background: $main-color;
-    color: #fff;
-    @include container(1440);
-    display: flex;
-    justify-content: space-between;
-    height: 200vh;
+  background: $bg-light-gray;
+  color: $text-dark;
+  h2 { 
+    margin-bottom: 1em; 
+    position: sticky;
+    left: 0;
+    top: 70px;  // 정지 위치
+    height: 100px;
   }
+  .container {
+    @include container(1440);
+  }
+  article {
+    position: sticky;
+    left: 0;
+    top: 170px;
+    height: 70vh;
+    @include flex(center, center);
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px 100px;
+    h3 { 
+      font-size: 2em; 
+      margin-bottom: 1rem;
+    }
+    p { margin-bottom: 2em; }
+
+    &:nth-of-type(1) { 
+      background: $bg-box-color1;
+      top: 170px; // 정지 위치(섹션 제목 아래)
+    }
+    &:nth-of-type(2) {
+       background: $bg-box-color2;
+       top: 190px; // 정지 위치 -20px 보정
+    }
+    &:nth-of-type(3) { background: $bg-box-color3; }
+  }
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 1em;
+  border: 1px solid $text-dark;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-size: small;
 }
