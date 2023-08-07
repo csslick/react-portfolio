@@ -6,3 +6,8 @@
   align-items: $cross;
 }
 
+@mixin container($width) {
+  max-width: $width+px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
