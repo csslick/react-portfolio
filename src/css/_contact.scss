@@ -1,22 +1,48 @@
 // contact.scss
 
-#contact {
-  text-align: center;
-  .container {
-    height: calc(100vh - $header-height - $footer-height);
-    @include flex(center, center);
-  }
-
-  h2 { 
-    font-size: 6em; 
-  }
-  .address {
-    li { margin-bottom: 1em;}
-    a { 
-      &:hover { text-decoration: underline; }
+@media screen and (min-width: 768px) {
+  #contact {
+    text-align: center;
+    .container {
+      height: calc(100vh - $header-height - $footer-height);
+      @include flex(center, center);
     }
-    color: #666;
-    h4 { color: #333; font-size: 22px; }
-  }
+  
+    h2 { 
+      font-size: 6em; 
+    }
+    .address {
+      li { margin-bottom: 1em;}
+      a { 
+        &:hover { text-decoration: underline; }
+      }
+      color: #666;
+      h4 { color: #333; font-size: 22px; }
+    }
+  
+  }  
+}
 
+
+@media screen and (max-width: 767px) {
+  #contact {
+    text-align: center;
+    .container {
+      height: calc(100vh - $header-height - $footer-height);
+      @include flex(center, center);
+    }
+  
+    h2 { 
+      font-size: 3em; 
+    }
+    .address {
+      li { margin-bottom: 1em;}
+      a { 
+        &:hover { text-decoration: underline; }
+      }
+      color: #666;
+      h4 { color: #333; font-size: 22px; }
+    }
+  
+  }
 }
