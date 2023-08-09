@@ -1,0 +1,16 @@
+// _footer.scss
+
+footer {
+  // background: $main-color;
+  width: 100%;
+
+  .container {
+    font-size: 16px;
+    color: $sub-color;
+    height: $footer-height;
+    display: flex;
+    @include flex(center, center);
+    // color: #fff;
+    border-top: 1px solid rgba(0,0,0,0.3);
+  }
+}
