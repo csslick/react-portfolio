@@ -5,7 +5,7 @@ export default function Header() {
 
   return (
     <header id='header'>
-      <h1>REACT PORTFOLIO</h1>
+      <h1> <a href="#intro">REACT PORTFOLIO</a></h1>
       <nav className={toggle ? 'active': ''}>
         <ul>
           <li><a href="#intro">intro</a></li>
