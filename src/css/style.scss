@@ -15,3 +15,7 @@ body {
 }
 
 section h2 { font-size: 3em; }
+
+@media screen and (max-width: 767px) {
+  section h2 { font-size: 2em; }
+}

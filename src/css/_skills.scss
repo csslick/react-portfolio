@@ -1,42 +1,89 @@
-#skills {
-  background: $bg-light-gray;
-  color: $text-dark;
-  h2 { 
-    margin-bottom: 1em; 
-    position: sticky;
-    left: 0;
-    top: 70px;  // 정지 위치
-    height: 100px;
-  }
-  .container {
-    @include container(1440);
-  }
-  article {
-    position: sticky;
-    left: 0;
-    top: 170px;
-    height: 70vh;
-    @include flex(center, center);
-    text-align: center;
-    border-radius: 20px;
-    padding: 30px 100px;
-    box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
-    h3 { 
-      font-size: 2em; 
-      margin-bottom: 1rem;
+@media screen and (min-width: 768px) {
+  #skills {
+    background: $bg-light-gray;
+    color: $text-dark;
+    h2 { 
+      margin-bottom: 1em; 
+      position: sticky;
+      left: 0;
+      top: 70px;  // 정지 위치
+      height: 100px;
     }
-    p { margin-bottom: 2em; }
+    .container {
+      @include container(1440);
+    }
+    article {
+      position: sticky;
+      left: 0;
+      top: 170px;
+      height: 70vh;
+      @include flex(center, center);
+      text-align: center;
+      border-radius: 20px;
+      padding: 30px 100px;
+      box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+      h3 { 
+        font-size: 2em; 
+        margin-bottom: 1rem;
+      }
+      p { margin-bottom: 2em; }
+  
+      &:nth-of-type(1) { 
+        background: $bg-box-color1;
+        top: 170px; // 정지 위치(섹션 제목 아래)
+      }
+      &:nth-of-type(2) {
+         background: $bg-box-color2;
+         top: 190px; // 정지 위치 -20px 보정
+      }
+      &:nth-of-type(3) { background: $bg-box-color3; }
+    }
+  }
+    
+}
 
-    &:nth-of-type(1) { 
-      background: $bg-box-color1;
-      top: 170px; // 정지 위치(섹션 제목 아래)
+@media screen and (max-width: 767px) {
+  #skills {
+    background: $bg-light-gray;
+    color: $text-dark;
+    h2 { 
+      margin-bottom: 1em; 
+      position: sticky;
+      left: 0;
+      top: 70px;  // 정지 위치
+      height: 100px;
     }
-    &:nth-of-type(2) {
-       background: $bg-box-color2;
-       top: 190px; // 정지 위치 -20px 보정
+    .container {
+      width: 100%;
+      padding: 50px 20px;
+    } 
+    article {
+      position: sticky;
+      left: 0;
+      top: 170px;
+      height: 70vh;
+
+      text-align: center;
+      border-radius: 20px;
+      padding: 30px 20px;
+      box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+      h3 { 
+        font-size: 1.4em; 
+        margin-bottom: 1rem;
+      }
+      p { margin-bottom: 2em; }
+  
+      &:nth-of-type(1) { 
+        background: $bg-box-color1;
+        top: 170px; // 정지 위치(섹션 제목 아래)
+      }
+      &:nth-of-type(2) {
+         background: $bg-box-color2;
+         top: 260px; // 정지 위치 -20px 보정
+      }
+      &:nth-of-type(3) { background: $bg-box-color3; }
     }
-    &:nth-of-type(3) { background: $bg-box-color3; }
-  }
+  }  
 }
 
 .tag {
