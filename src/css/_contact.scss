@@ -1,0 +1,22 @@
+// contact.scss
+
+#contact {
+  text-align: center;
+  .container {
+    height: calc(100vh - 70px);
+    @include flex(center, center);
+  }
+
+  h2 { 
+    font-size: 6em; 
+  }
+  .address {
+    li { margin-bottom: 1em;}
+    a { 
+      &:hover { text-decoration: underline; }
+    }
+    color: #666;
+    h4 { color: #333; font-size: 22px; }
+  }
+
+}

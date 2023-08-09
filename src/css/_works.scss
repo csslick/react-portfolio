@@ -1,0 +1,57 @@
+// _works.scss
+
+#works {
+  background-color: #fff;
+  h2 { margin-bottom: 1rem; }
+  overflow: hidden; // 1. 가로 스크롤바 제거용(화면이 길게 연결됨 나중에 처리)
+
+  .container {
+    @include container(1440);
+    ul.works-box {
+      // background: pink;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 5000px; // 2. 작품 목록 컨테이너 가로로 길게 배치됨
+
+      li{
+        width: calc(100vw / 2.5);
+        // background: pink;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+        h3 { 
+          font-size: 24px; 
+          padding: 10px 0;
+        }
+        img {
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          object-fit: cover;
+          display: block;
+        }
+        p { 
+          color: #666; 
+          font-size: 16px;
+          border-top: 1px solid #ccc;
+          padding: 1rem 0;
+        }
+        // transform: translateX(-100px);
+      }
+    }
+  }
+}
+
+.btn-link {
+  display: block;
+  border: 1px solid #999;
+  text-align: center;
+  padding: 8px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $sub-color;
+    color: #fff;
+  }
+}
