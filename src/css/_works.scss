@@ -15,7 +15,12 @@
       width: 5000px; // 2. 작품 목록 컨테이너 가로로 길게 배치됨
 
       li{
-        width: calc(100vw / 2.5);
+        @media screen and (min-width: 768px) {
+          width: calc(100vw / 2.5);          
+        }
+        @media screen and (max-width: 767px) {
+          width: calc(100vw / 2); 
+        }
         // background: pink;
         display: flex;
         flex-direction: column;
